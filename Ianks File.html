@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice de Physique-Chimie - 4ème</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .question {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-left: 5px solid #4CAF50;
+        }
+        .question h3 {
+            margin-top: 0;
+        }
+        .answer-box {
+            margin-top: 10px;
+        }
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+        .feedback {
+            display: none;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #ffcccb;
+            border-radius: 5px;
+            color: #d8000c;
+        }
+        .correct {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .incorrect {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Exercice de Physique-Chimie - 4ème</h1>
+    <p>Répondez aux questions suivantes et soumettez vos réponses.</p>
+</header>
+
+<div class="container">
+    <div class="question">
+        <h3>1. Quelle est la formule chimique de l'eau ?</h3>
+        <div class="answer-box">
+            <input type="text" id="answer1" placeholder="Réponse ici...">
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>2. Quelle est la vitesse de la lumière dans le vide (en km/s) ?</h3>
+        <div class="answer-box">
+            <input type="text" id="answer2" placeholder="Réponse ici...">
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>3. Qui a découvert la gravité ?</h3>
+        <div class="answer-box">
+            <textarea id="answer3" placeholder="Réponse ici..." rows="4"></textarea>
+        </div>
+    </div>
+
+    <button class="submit-btn" onclick="checkAnswers()">Soumettre les réponses</button>
+
+    <div id="feedback" class="feedback"></div>
+</div>
+
+<script>
+    function checkAnswers() {
+        let feedback = document.getElementById("feedback");
+        let answer1 = document.getElementById("answer1").value.trim();
+        let answer2 = document.getElementById("answer2").value.trim();
+        let answer3 = document.getElementById("answer3").value.trim();
+
+        let correctAnswers = 0;
+        let totalQuestions = 3;
+
+        // Vérification des réponses
+        if (answer1.toLowerCase() === "h2o") {
+            correctAnswers++;
+        }
+        if (answer2 === "300000") {
+            correctAnswers++;
+        }
+        if (answer3.toLowerCase().includes("Isaac Newton") || answer3.toLowerCase().includes("La gravité")) {
+            correctAnswers++;
+        }
+
+        // Feedback
+        if (correctAnswers === totalQuestions) {
+            feedback.textContent = "Bravo ! Vous avez toutes les réponses correctes.";
+            feedback.className = "feedback correct";
+        } else {
+            feedback.textContent = "Des erreurs ont été trouvées. Vérifiez vos réponses.";
+            feedback.className = "feedback incorrect";
+        }
+
+        feedback.style.display = "block";
+    }
+</script>
+
+</body>
+</html>
