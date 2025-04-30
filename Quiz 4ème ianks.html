@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Physique-Chimie - Classe de 4ème</title>
+    <style>
+        /* Styles globaux */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #fff;
+            background-color: #4CAF50;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 900px;
+            margin: 40px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Questions */
+        .question {
+            margin-bottom: 25px;
+        }
+
+        .question p {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #444;
+        }
+
+        .answers {
+            margin-left: 20px;
+        }
+
+        .answers input {
+            margin-right: 10px;
+            transform: scale(1.2);
+        }
+
+        .answers label {
+            font-size: 1rem;
+            color: #555;
+            cursor: pointer;
+            padding: 5px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .answers label:hover {
+            background-color: #f1f1f1;
+            border-radius: 5px;
+        }
+
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+
+        /* Style pour les boutons radio */
+        input[type="radio"] {
+            cursor: pointer;
+        }
+
+        /* Déco pour les bordures et ombres */
+        .container {
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        /* Style des labels de questions */
+        .question p {
+            font-family: 'Arial', sans-serif;
+            font-size: 1.2rem;
+            color: #4CAF50;
+        }
+
+        /* Ajout de marges et paddings */
+        .answers input[type="radio"] {
+            margin-right: 8px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Quiz de Physique-Chimie - 4ème</h1>
+
+    <div class="container">
+        <form>
+            <!-- Question 1 -->
+            <div class="question">
+                <p>1. Quel est l'état de la matière dans l'eau à 25°C ?</p>
+                <div class="answers">
+                    <input type="radio" id="q1a1" name="q1" value="solide">
+                    <label for="q1a1">Solide</label><br>
+                    <input type="radio" id="q1a2" name="q1" value="liquide">
+                    <label for="q1a2">Liquide</label><br>
+                    <input type="radio" id="q1a3" name="q1" value="gaz">
+                    <label for="q1a3">Gaz</label><br>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question">
+                <p>2. Quel est le nom de la force qui attire les objets vers le sol ?</p>
+                <div class="answers">
+                    <input type="radio" id="q2a1" name="q2" value="gravitation">
+                    <label for="q2a1">Gravitation</label><br>
+                    <input type="radio" id="q2a2" name="q2" value="friction">
+                    <label for="q2a2">Friction</label><br>
+                    <input type="radio" id="q2a3" name="q2" value="pression">
+                    <label for="q2a3">Pression</label><br>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question">
+                <p>3. Quel est le symbole chimique de l'eau ?</p>
+                <div class="answers">
+                    <input type="radio" id="q3a1" name="q3" value="H2O">
+                    <label for="q3a1">H2O</label><br>
+                    <input type="radio" id="q3a2" name="q3" value="CO2">
+                    <label for="q3a2">CO2</label><br>
+                    <input type="radio" id="q3a3" name="q3" value="O2">
+                    <label for="q3a3">O2</label><br>
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question">
+                <p>4. Quelle est la principale source d'énergie du Soleil ?</p>
+                <div class="answers">
+                    <input type="radio" id="q4a1" name="q4" value="fusion nucléaire">
+                    <label for="q4a1">Fusion nucléaire</label><br>
+                    <input type="radio" id="q4a2" name="q4" value="fission nucléaire">
+                    <label for="q4a2">Fission nucléaire</label><br>
+                    <input type="radio" id="q4a3" name="q4" value="énergie chimique">
+                    <label for="q4a3">Énergie chimique</label><br>
+                </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question">
+                <p>5. Quelle est la température de fusion de l'eau ?</p>
+                <div class="answers">
+                    <input type="radio" id="q5a1" name="q5" value="0°C">
+                    <label for="q5a1">0°C</label><br>
+                    <input type="radio" id="q5a2" name="q5" value="100°C">
+                    <label for="q5a2">100°C</label><br>
+                    <input type="radio" id="q5a3" name="q5" value="25°C">
+                    <label for="q5a3">25°C</label><br>
+                </div>
+            </div>
+
+            <!-- Bouton de soumission -->
+            <button type="submit" class="submit-btn">Soumettre les réponses</button>
+        </form>
+    </div>
+
+</body>
+</html>
